@@ -23,9 +23,8 @@ console.log("Copied array: " + arrCopy);
 
 //----------------4-------------------
 console.log("------------------------4---------------");
-for (let i = 2; i < array.length; i++) {
+for (let i = 0; i < array.length; i += 2) {
   console.log(array[i]);
-  i++;
 }
 
 //----------------5-------------------
