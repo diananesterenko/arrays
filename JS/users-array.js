@@ -31,12 +31,7 @@ console.log(users);
 console.log(users[2].getFullName());
 //Отримати масив користувачів, які не підписані (not subscribed)
 console.log("-------------------------1---------------------");
-const notSubscribed = users.filter((item) => {
-  if (item.isSubscribed === false) {
-    const userCopy = { ...item };
-    return userCopy;
-  }
-});
+const notSubscribed = users.filter((item) => !item.isSubscribed);
 console.log(notSubscribed);
 
 //Отримати масив повних імен осіб жіночої статі шкільного віку (6 – 18 років).
