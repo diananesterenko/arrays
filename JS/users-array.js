@@ -60,5 +60,5 @@ console.log(isemail);
 
 //Перевірити, чи всі користувачі підписані (subscribed).
 console.log("-------------------------5---------------------");
-const isSubscribed = users.every((element) => element.isSubscribed === true);
+const isSubscribed = users.every((element) => element.isSubscribed);
 console.log(isSubscribed);
