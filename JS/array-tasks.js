@@ -49,7 +49,7 @@ console.log(accum);
 
 //----------------8-------------------
 console.log("------------------------8---------------");
-const arrNotNull = array.filter((item) => item != 0);
+const arrNotNull = array.filter((item) => item !== 0);
 console.log("Not null array:     " + arrNotNull);
 
 //-----------------9------------------
