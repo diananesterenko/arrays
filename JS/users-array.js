@@ -14,7 +14,6 @@ userProto.getFullName = function () {
   return `${this.firstName} ${this.lastName}`;
 };
 User.prototype = userProto;
-users.push(user);
 
 for (let i = 0; i < 100; i++) {
   const user = new User(
@@ -25,6 +24,7 @@ for (let i = 0; i < 100; i++) {
     `useremail${i}@gmail.com`,
     Math.random() > 0.5
   );
+  users.push(user);
 }
 
 console.log(users);
@@ -36,12 +36,11 @@ console.log(notSubscribed);
 
 //Отримати масив повних імен осіб жіночої статі шкільного віку (6 – 18 років).
 console.log("-------------------------2---------------------");
-const schoolNames = users.filter((item) => {
-  if (item.age >= 6 && item.age <= 18) {
-    return `${item.firstName} ${item.lastName}`;
-  }
-});
-console.log(schoolNames);
+
+const fullNames = users
+  .filter((item) => item.age >= 6 && item.age <= 18)
+  .map((item) => `${item.firstName} ${item.lastName}`);
+console.log(fullNames);
 
 //Видалити з масиву користувача з email useremail5@gmail.com
 console.log("-------------------------3---------------------");
