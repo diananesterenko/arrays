@@ -48,7 +48,7 @@ const foundIndex = users.findIndex(
   (item) => item.email === "useremail99@gmail.com"
 );
 console.log(foundIndex);
-users.splice(foundIndex, 1);
+if (foundIndex !== -1) users.splice(foundIndex, 1);
 console.log(users);
 
 //Перевірити, чи є серед користувачів користувач з email`ом useremail99@gmail.com
