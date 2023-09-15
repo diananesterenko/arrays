@@ -9,6 +9,13 @@ function User(name, surname, age, isMale, email, isSubscribed) {
 
 const users = [];
 
+const userProto = {};
+userProto.getFullName = function () {
+  return `${this.firstName} ${this.lastName}`;
+};
+User.prototype = userProto;
+users.push(user);
+
 for (let i = 0; i < 100; i++) {
   const user = new User(
     `Username${i}`,
@@ -18,12 +25,6 @@ for (let i = 0; i < 100; i++) {
     `useremail${i}@gmail.com`,
     Math.random() > 0.5
   );
-  const userProto = {};
-  userProto.getFullName = function () {
-    return `${this.firstName} ${this.lastName}`;
-  };
-  User.prototype = userProto;
-  users.push(user);
 }
 
 console.log(users);
