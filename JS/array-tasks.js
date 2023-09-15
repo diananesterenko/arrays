@@ -68,7 +68,7 @@ console.log("------------------------11---------------");
 
 const foundIndex = array.findIndex((item) => item ** 2 === 100);
 
-foundIndex ? console.log(foundIndex) : "No found index";
+console.log(foundIndex !== -1 ? foundIndex : "No found index");
 
 //-----------------12------------------
 console.log("------------------------12---------------");
